@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import "tailwindcss";
+
+html,
+body,
+#root,
+.app {
+  font-family: 'poppins', sans-serif;
+}
+
+
+.loader {
+  --color-1: #ddd;
+  --size: 1px;
+  /* width: calc(48 * var(--size)); */
+  /* height: calc(48 * var(--size)); */
+  border: calc(2 * var(--size)) solid var(--color-1);
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#snackbar {
+  border-radius: '50px';
+  animation: animate-alert 0.5s forwards ease-in;
+}
+
+
+@keyframes animate-alert {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.btn-account:hover {
+  background: #d2286c;
+  transition-duration: 1s;
+}
+
+
+#menu {
+  @apply flex flex-col justify-center items-center p-0 rounded-2xl
+}
+
+#menu-item-1, #menu-item-2 {
+  @apply flex justify-center py-2 w-full h-full rounded-2xl text-center hover:bg-[#6d5c5c] hover:transition-all hover:duration-200
+}

@@ -1,0 +1,127 @@
+import mongoose from "mongoose";
+
+const userIds = [
+  new mongoose.Types.ObjectId(),
+  new mongoose.Types.ObjectId(),
+  new mongoose.Types.ObjectId(),
+  new mongoose.Types.ObjectId(),
+];
+
+export const users = [
+  {
+    _id: userIds[1],
+    firstName: "Christopher",
+    lastName: "Nolan",
+    email: "nolan@gmail.com",
+    password: "$!FEAS@!O)_IDJda//G9JxQ4bQ8KXf4OAIe/X/AK9skyWUy",
+    picturePath: "nolan.jpeg",
+    friends: [],
+    location: "New York, CA",
+    occupation: "Director",
+    viewedProfile: 12351,
+    impressions: 55555,
+    createdAt: 1595589072,
+    updatedAt: 1595589072,
+    __v: 0,
+  },
+  {
+    _id: userIds[2],
+    firstName: "Jackie",
+    lastName: "Chan",
+    email: "jackiechan@gmail.com",
+    password: "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+    picturePath: "jackie.jpeg",
+    friends: [],
+    location: "Hong Kong, China",
+    occupation: "Actor",
+    viewedProfile: 45468,
+    impressions: 19986,
+    createdAt: 1288090662,
+    updatedAt: 1288090662,
+    __v: 0,
+  },
+  {
+    _id: userIds[3],
+    firstName: "Khabib",
+    lastName: "Nurmagomedov",
+    email: "khabib@gmail.com",
+    password: "$2b$10$dsasdgsagasda//G9JxQ4bQ8KXf4OAIe/X/AK9skyWUy",
+    picturePath: "khabib.jpeg",
+    friends: [],
+    location: "Dagestan, Russia",
+    occupation: "Mixed Martial Artist",
+    viewedProfile: 41024,
+    impressions: 55316,
+    createdAt: 1219214568,
+    updatedAt: 1219214568,
+    __v: 0,
+  },
+];
+
+export const posts = [
+  {
+    _id: new mongoose.Types.ObjectId(),
+    userId: userIds[1],
+    firstName: "Christopher",
+    lastName: "Nolan",
+    location: "New York, CA",
+    description: "My latest movie poster",
+    picturePath: "post1.jpeg",
+    typeOfPost: "image/jpeg",
+    videoPath: "",
+    userPicturePath: "nolan.jpeg",
+    likes: new Map([
+      [userIds[2], true],
+      [userIds[3], true],
+    ]),
+    comments: [
+      "Wow nice movie",
+      "Absolute cinema!",
+      "I love these kind of movies",
+    ],
+  },
+  {
+    _id: new mongoose.Types.ObjectId(),
+    userId: userIds[2],
+    firstName: "Jackie",
+    lastName: "Chan",
+    location: "Hong Kong, China",
+    description:
+    "How am I looking in this post?",
+    picturePath: "post2.jpeg",
+    typeOfPost: "image/jpeg",
+    videoPath: "",
+    userPicturePath: "jackie.jpeg",
+    likes: new Map([
+      [userIds[1], true],
+      [userIds[3], true],
+    ]),
+    comments: [
+      "My favourite actor",
+      "You look amazing",
+      "This post of yours is fantastic",
+      "When is your next movie coming?",
+    ],
+  },
+  {
+    _id: new mongoose.Types.ObjectId(),
+    userId: userIds[3],
+    firstName: "Khabib",
+    lastName: "Nurmagomedov",
+    location: "Dagestan, Russia",
+    description:
+    "I don't fight for the money. I fight for my legacy. I fight for history. I fight for my people.",
+    picturePath: "post3.jpeg",
+    typeOfPost: "image/jpeg",
+    videoPath: "",
+    userPicturePath: "khabib.jpeg",
+    likes: new Map([
+      [userIds[1], true],
+      [userIds[2], true],
+    ]),
+    comments: [
+      "The undefeated one",
+      "May Allah bless you",
+    ],
+  },
+];
