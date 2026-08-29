@@ -62,7 +62,7 @@ app.get('/', (req, res) => {
 })
 
 // Mongoose setup
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5174;
 mongoose.connect(process.env.MONGO_URL)
 .then(() => {
   app.listen(PORT, () => console.log(`Server has started on PORT: ${PORT}`))
