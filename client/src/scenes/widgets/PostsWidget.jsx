@@ -26,7 +26,7 @@ const PostsWidget = ({ userId, isProfile = false }) => {
 
 
     const getPosts = async () => {
-        const response = await fetch("http://localhost:5174/posts", {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/posts`, {
             method: "GET",
             headers: { Authorization: `Bearer ${token}` },
         })
@@ -35,7 +35,7 @@ const PostsWidget = ({ userId, isProfile = false }) => {
     }
     
     const getUserPosts = async () => {
-        const response = await fetch(`http://localhost:5174/posts/${userId}/posts`, {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/posts/${userId}/posts`, {
             method: "GET",
             headers: { Authorization: `Bearer ${token}` },
         })

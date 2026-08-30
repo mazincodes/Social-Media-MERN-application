@@ -13,7 +13,7 @@ const FriendList = ({ userId }) => {
     const text = palette.primary.lightest;
 
     const getFriends = async () => {
-        const response = await fetch(`http://localhost:5174/users/${userId}/friends`, {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/users/${userId}/friends`, {
             method: 'GET',
             headers: { Authorization: `Bearer ${token}` }
         })

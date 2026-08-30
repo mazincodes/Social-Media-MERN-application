@@ -21,7 +21,7 @@ const ProfilePage = () => {
     const isNonMobileScreens = useMediaQuery("(max-width: 1280px)")
 
     const getUser = async () => {
-        const response = await fetch(`http://localhost:5174/users/${userId}`, {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/users/${userId}`, {
             method: 'GET',
             headers: { Authorization: `Bearer ${token}` }
         })

@@ -44,7 +44,7 @@ const PostWidget = ({
 
     const handleDelete = async () => {
         try {
-            const response = await fetch(`http://localhost:5174/posts/${postId}`, {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/posts/${postId}`, {
                 method: 'DELETE',
                 headers: {
                     Authorization: `Bearer ${token}`,
@@ -69,7 +69,7 @@ const PostWidget = ({
         try {
             setIsLoading(true)
             const response = await fetch(
-                `http://localhost:5174/posts/${postId}/description`,
+                `${import.meta.env.VITE_API_URL}/posts/${postId}/description`,
                 {
                     method: "PATCH",
                     headers: {
@@ -174,7 +174,7 @@ const PostWidget = ({
     }
 
     const patchLike = async () => {
-        const response = await fetch(`http://localhost:5174/posts/${postId}/like`, {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/posts/${postId}/like`, {
             method: 'PATCH',
             headers: { 
                 Authorization: `Bearer ${token}`,

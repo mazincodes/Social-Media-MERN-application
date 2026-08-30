@@ -29,7 +29,7 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
     const wasFriend = Boolean(isFriend)
 
     const patchFriend = async () => {
-        const response = await fetch(`http://localhost:5174/users/${_id}/${friendId}`, {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/users/${_id}/${friendId}`, {
             method: 'PATCH',
             headers: {
                 Authorization: `Bearer ${token}`, 
