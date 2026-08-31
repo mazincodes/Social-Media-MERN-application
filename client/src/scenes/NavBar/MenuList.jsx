@@ -101,7 +101,7 @@ export default function AccountOptions () {
                     <MenuItem className='rounded-4xl duration-500' id='menu-item-1' onClick={handleClose}>
                       <a onClick={() => {
                         navigate(`/profile/${_id}`)
-                        // navigate(0)
+                        navigate(0)
                       }}>{fullName}</a>
                     </MenuItem>
                     <MenuItem className='rounded-4xl duration-500' id='menu-item-2' onClick={logOut}>Log Out</MenuItem>

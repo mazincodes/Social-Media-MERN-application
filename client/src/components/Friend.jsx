@@ -49,7 +49,7 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
                     <UserImage image={userPicturePath} size={'55px'} />
                     <div className='flex flex-col' onClick={() => {
                         navigate(`/profile/${friendId}`)
-                        // navigate(0)
+                        navigate(0)
                     }}>
                         <h1 className='text-[18px] cursor-pointer font-semibold' style={{color: text}}>{name}</h1>
                         <h1 className='text-[14px]' style={{color: light}}>{subtitle}</h1>
