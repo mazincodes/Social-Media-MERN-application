@@ -100,7 +100,7 @@ export default function AccountOptions () {
                   >
                     <MenuItem className='rounded-4xl duration-500' id='menu-item-1' onClick={handleClose}>
                       <a onClick={() => {
-                        navigate(`/profile/${_id}`)
+                        navigate(`${import.meta.env.VITE_API_URL}/profile/${_id}`)
                         navigate(0)
                       }}>{fullName}</a>
                     </MenuItem>

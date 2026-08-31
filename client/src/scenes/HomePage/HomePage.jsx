@@ -48,7 +48,7 @@ const HomePage = () => {
                         <div>
                             <MyPostWidget picturePath={picturePath} />
                             <div className='flex justify-center'>
-                                <Button onClick={() => navigate(`/profile/${_id}`)} sx={{
+                                <Button onClick={() => navigate(`${import.meta.env.VITE_API_URL}/profile/${_id}`)} sx={{
                                     "&:hover": {
                                         background: pinkWarm,
                                         boxShadow: `0 0 5px 0 ${light}`,

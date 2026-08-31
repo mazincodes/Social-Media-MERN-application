@@ -240,11 +240,11 @@ const PostWidget = ({
                 
                 <div className="flex justify-center items-center">
                     {picturePath && isTypeOfPostImage && (
-                        <img className="w-[80%] rounded-2xl m-4" src={`${import.meta.env.VITE_API_URL}/assets/${picturePath}`} alt="Post" />
+                        <img className="w-[80%] rounded-2xl m-4" src={`${import.meta.env.VITE_API_URL}/../assets/${picturePath}`} alt="Post" />
                     )}
 
                     {picturePath && isTypeOfPostVideo && (
-                        <video className="w-[80%] rounded-2xl m-4" src={`${import.meta.env.VITE_API_URL}/assets/${picturePath}`} muted controls loop></video>
+                        <video className="w-[80%] rounded-2xl m-4" src={`${import.meta.env.VITE_API_URL}/../assets/${picturePath}`} muted controls loop></video>
                     )}
                 </div>
 

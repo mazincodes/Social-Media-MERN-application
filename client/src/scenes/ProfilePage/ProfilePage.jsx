@@ -38,7 +38,7 @@ const ProfilePage = () => {
     return (
         <>
             <NavBar />
-            <Button onClick={() => navigate("/home")} sx={{
+            <Button onClick={() => navigate(`${import.meta.env.VITE_API_URL}/home`)} sx={{
                 "&:hover": {
                     background: pinkWarm,
                     boxShadow: `0 0 5px 0 ${light}`,
