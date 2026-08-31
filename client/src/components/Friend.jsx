@@ -48,7 +48,7 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
                 <div className='flex justify-center items-center gap-2'>
                     <UserImage image={userPicturePath} size={'55px'} />
                     <div className='flex flex-col' onClick={() => {
-                        navigate(`${import.meta.env.VITE_API_URL}/profile/${friendId}`)
+                        navigate(`/profile/${friendId}`)
                         navigate(0)
                     }}>
                         <h1 className='text-[18px] cursor-pointer font-semibold' style={{color: text}}>{name}</h1>

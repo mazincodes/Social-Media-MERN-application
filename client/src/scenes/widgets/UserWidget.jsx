@@ -48,7 +48,7 @@ const UserWidget = ({ userId, picturePath }) => {
     return (
         <section style={{background: dark, color: text}} className='p-8 my-8 rounded-2xl'>
             <div className='user flex justify-center items-center gap-2 m-4'>
-                <div className='rounded-full' onClick={() => navigate(`${import.meta.env.VITE_API_URL}/profile/${userId}`)}>
+                <div className='rounded-full' onClick={() => navigate(`/profile/${userId}`)}>
                     <UserImage image={picturePath} />
                 </div>
                 <div>

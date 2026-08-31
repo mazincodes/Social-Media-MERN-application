@@ -25,7 +25,7 @@ const NavBar = () => {
     return (
         <>
             <nav style={{background: dark, color: text}} className="flex justify-between items-center p-6">
-                <a onClick={() => navigate(`${import.meta.env.VITE_API_URL}/home`)}>
+                <a onClick={() => navigate(`/home`)}>
                     <h1 style={{color: pinkHot}} className='text-5xl cursor-pointer'>Feeds</h1>
                 </a>
                     {/* *********Desktop********* */}

@@ -101,7 +101,7 @@ const NewForm = ({showAlert}) => {
             token: loggedIn.token,
           }),
         );
-        navigate(`${import.meta.env.VITE_API_URL}/home`);
+        navigate(`/home`);
       }
     
   };
